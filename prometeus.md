@@ -53,6 +53,7 @@
 > fdisk /dev/sda 
 ## Particionamento em **naberrie**
 * Particionamento em GPT disk por causa do UEFI
+
 Partição   | Diretório | Tamanho | Formato
 --------- | --------- | --------- | ---------
 /dev/sda1   | EFI | 250M | EFI
