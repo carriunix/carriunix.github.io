@@ -52,5 +52,11 @@
 * Login como root
 > fdisk /dev/sda 
 ## Particionamento em **naberrie**
-Particionamento 
-* /dev/sda1 
+* Particionamento em GPT disk por causa do UEFI
+Partição   | Diretório | Tamanho | Formato
+--------- | --------- | --------- | ---------
+/dev/sda1   | EFI | 250M | EFI
+/dev/sda2   | swap | 10Gb | Linux swap
+/dev/sda3  | / | 40Gb | Linux filesystem
+/dev/sda4   | /usr/local | 40Gb | Linux filesystem
+/dev/sda5   | /home | 133Gb | Linux filesystem
