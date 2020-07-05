@@ -46,7 +46,7 @@
 * **deathstar:** direto na BIOS.
 * **naberrie:** na BIOS, desabilite a opção Fast Boot e Securet Boot, plug o USB, reboot e acesse a BIOS novamente.
 
-# Instalando o Slackware
+# Preparando instalação do Slackware
 * Carregue o kernel huge.s
 * Selecione o teclado (qwerty/br-abnt2.map)
 * Login como root
@@ -61,3 +61,31 @@ Partição   | Diretório | Tamanho | Formato
 /dev/sda3  | / | 40Gb | Linux filesystem
 /dev/sda4   | /usr/local | 40Gb | Linux filesystem
 /dev/sda5   | /home | 133Gb | Linux filesystem
+
+## Particionamento em **deathstar**
+* (loading...)
+
+# Fazendo a instalação...
+> setup
+* Selecione o teclado (qwerty/br-abnt2.map)
+* Confirme a partição swap
+* Indique as partições conforme a tabela de particionamento
+* Indique o USB como source
+* Confirme a instalação padrão
+* Selecione o modo de prompting _terse_
+* Selecione o hardware clock para _local time_ e timezone em _America/Sao_Paulo_
+* Escolha a fonte customizada: _ter-116n_
+
+Em **deathstar**:
+* Instale o LILO
+Em **naberrie**:
+* Pule a instalação do LILO e instale o ELILO
+
+* Pule a configuração de rede
+* Selecione o _fluxbox_ como window manager
+* Selecione a senha de root
+* Reinicie o computador
+
+
+
+
