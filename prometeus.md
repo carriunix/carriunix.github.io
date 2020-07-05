@@ -79,15 +79,36 @@ Partição   | Diretório | Tamanho | Formato
 
 Em **deathstar**:
 * Instale o LILO
+* Configure a rede com host _deathstar_ , domain _padme_ e protocolo DHCP.
 
 Em **naberrie**:
 * Pule a instalação do LILO e instale o ELILO
+* Configure a rede com host _naberrie_ , domain _padme_ e protocolo DHCP.
 
-* Pule a configuração de rede
 * Selecione o _fluxbox_ como window manager
 * Selecione a senha de root
 * Reinicie o computador
 
+#Atualizando o sistema
+* Substituir/editar /etc/slackpkg/blacklist
+* Editar /etc/slackpkg/mirrors
+* Substituir/editar /etc/wpa_supplicant.conf
+
+Em **deathstar**:
+* (loading...)
+
+Em **naberrie**:
+> ifconfig wlan0 up
+> wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf -B
+> dhcpcd wlan0
+
+* Fazer upgrade dos pacotes nativos (conforme este )
+
+> slackpkg update
+> slackpkg upgrade slackpkg
+> slackpkg upgrade glibc-solibs
+> slackpkg install-new
+> slackpkg upgrade-all
 
 
 
