@@ -1,4 +1,4 @@
-#  Criando o USB de instalação
+##  Criando o USB de instalação
 * Usando o processo sugerido por Patrick Volkering descrito [aqui.](http://slackware.osuosl.org/slackware/isolinux/README.TXT)
 >HOW TO MAKE A BOOTABLE SLACKWARE DVD ISO IMAGE
 >
@@ -42,17 +42,17 @@
 >dd if=/tmp/slackware-dvd.iso of=/dev/sdX bs=1M
 >(...)
 
-# Fazendo boot pelo USB
+## Fazendo boot pelo USB
 * **deathstar:** direto na BIOS.
 * **naberrie:** na BIOS, desabilite a opção Fast Boot e Securet Boot, plug o USB, reboot e acesse a BIOS novamente.
 
-# Preparando instalação do Slackware
+## Preparando instalação do Slackware
 * Carregue o kernel huge.s
 * Selecione o teclado (qwerty/br-abnt2.map)
 * Login como root
 > fdisk /dev/sda 
 
-## Particionamento em **naberrie**
+### Particionamento em **naberrie**
 * Particionamento em GPT disk por causa do UEFI
 
 Partição   | Diretório | Tamanho | Formato
@@ -63,10 +63,10 @@ Partição   | Diretório | Tamanho | Formato
 /dev/sda4   | /usr/local | 40Gb | Linux filesystem
 /dev/sda5   | /home | 133Gb | Linux filesystem
 
-## Particionamento em **deathstar**
+### Particionamento em **deathstar**
 * (loading...)
 
-# Fazendo a instalação...
+## Fazendo a instalação...
 > setup
 * Selecione o teclado (qwerty/br-abnt2.map)
 * Confirme a partição swap
@@ -89,7 +89,7 @@ Em **naberrie**:
 * Selecione a senha de root
 * Reinicie o computador
 
-#Atualizando o sistema
+## Atualizando o sistema
 * Substituir/editar /etc/slackpkg/blacklist
 * Editar /etc/slackpkg/mirrors
 * Substituir/editar /etc/wpa_supplicant.conf
@@ -105,10 +105,16 @@ Em **naberrie**:
 * Fazer upgrade dos pacotes nativos (conforme este )
 
 > slackpkg update
+
 > slackpkg upgrade slackpkg
+
 > slackpkg upgrade glibc-solibs
+
 > slackpkg install-new
+
 > slackpkg upgrade-all
+
+> slackpkg clean-system
 
 
 
