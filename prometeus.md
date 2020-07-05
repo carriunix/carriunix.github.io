@@ -51,6 +51,7 @@
 * Selecione o teclado (qwerty/br-abnt2.map)
 * Login como root
 > fdisk /dev/sda 
+
 ## Particionamento em **naberrie**
 * Particionamento em GPT disk por causa do UEFI
 
@@ -78,6 +79,7 @@ Partição   | Diretório | Tamanho | Formato
 
 Em **deathstar**:
 * Instale o LILO
+
 Em **naberrie**:
 * Pule a instalação do LILO e instale o ELILO
 
