@@ -74,47 +74,22 @@ Partição   | Diretório | Tamanho | Formato
 * Indique o USB como source
 * Confirme a instalação padrão
 * Selecione o modo de prompting _terse_
-* Selecione o hardware clock para _local time_ e timezone em _America/Sao_Paulo_
-* Escolha a fonte customizada: _ter-116n_
+* Pule a criação de um USB boot stick
 
 Em **deathstar**:
 * Instale o LILO
+* Selecione o mouse _imps2_
 * Configure a rede com host _deathstar_ , domain _padme_ e protocolo DHCP.
 
 Em **naberrie**:
 * Pule a instalação do LILO e instale o ELILO
+* Selecione o mouse _imps2_
 * Configure a rede com host _naberrie_ , domain _padme_ e protocolo DHCP.
 
+* Confirme os serviços de inicialização padrão
+* Escolha a fonte customizada: _ter-116n_
+* Selecione o hardware clock para _local time_ e timezone em _America/Sao_Paulo_
+* Confirme o editor ex/vi padrão
 * Selecione o _fluxbox_ como window manager
 * Selecione a senha de root
 * Reinicie o computador
-
-## Atualizando o sistema
-* Substituir/editar /etc/slackpkg/blacklist
-* Editar /etc/slackpkg/mirrors
-* Substituir/editar /etc/wpa_supplicant.conf
-
-Em **deathstar**:
-* (loading...)
-
-Em **naberrie**:
-> ifconfig wlan0 up
-> wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf -B
-> dhcpcd wlan0
-
-* Fazer upgrade dos pacotes nativos (conforme este )
-
-> slackpkg update
-
-> slackpkg upgrade slackpkg
-
-> slackpkg upgrade glibc-solibs
-
-> slackpkg install-new
-
-> slackpkg upgrade-all
-
-> slackpkg clean-system
-
-
-
