@@ -93,3 +93,15 @@ Em **naberrie**:
 * Selecione o _fluxbox_ como window manager
 * Selecione a senha de root
 * Reinicie o computador
+
+## Arquivos de configuração
+* Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.updates) para /etc/rc.d/
+* Copie o script boottime para /usr/local/sbin/ e dê permissão de executável
+* Prepare o sistema para hibernação: adicione a linha abaixo em /boot/efi/EFI/Slackware/elilo.conf
+> append="resume=/dev/sda2"
+
+* Copie o arquivo acpi_handler.sh para /etc/acpi/
+
+# 
+
+
