@@ -94,25 +94,45 @@ Em **naberrie**:
 * Selecione a senha de root
 * Reinicie o computador
 
+## Conectar-se à internet
+Em **deathstar**:
+(loading...)
+
+Em **naberrie**:
+> ifconfig wlan0 up
+
+* Configure a rede wifi local usando:
+>wpa_passphrase "ESSID" "password" >> /etc/wpa_supplicant.conf
+>
+>wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf -B
+>
+>dhcpcd wlan0
+
 ## Atualizando softwares
 * Edite o arquivo /etc/slackpkg/mirrors para selecionar um mirror
+* Edite o arquivo /etc/slackpkg/blacklist para que o gerenciador de pacotes ignore os arquivos do kernel e pacotes provenientesde SlackBuilds (\[0-9\]+\_SBo) e acrescente exceção também aos pacotes do AlienBOB (\[0-9\]+alien) e de compatibilidade 32-bits (\[0-9\]+\compat32) 
 >slackpkg update gpg
+>
 >slackpkg update
+>
 >slackpkg upgrade slackpkg
+>
 >slackpkg new-config
+>
 >slackpkg upgrade glibc-solibs
+>
 >slackpkg install-new
+>
 >slackpkg upgrade-all
+>
 >slackpkg clean-system
 
 ## Arquivos de configuração
-* Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.updates) para /etc/rc.d/
+* Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.update, rc.netservices) para /etc/rc.d/
 * Copie o script boottime para /usr/local/sbin/ e dê permissão de executável
 * Prepare o sistema para hibernação: adicione a linha abaixo em /boot/efi/EFI/Slackware/elilo.conf
 > append="resume=/dev/sda2"
 
 * Copie o arquivo acpi_handler.sh para /etc/acpi/
-
-#
 
 
