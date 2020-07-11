@@ -60,7 +60,7 @@ Partição   | Diretório | Tamanho | Formato
 /dev/sda1   | EFI | 250M | EFI
 /dev/sda2   | swap | 10Gb | Linux swap
 /dev/sda3  | / | 40Gb | Linux filesystem
-/dev/sda4   | /usr/local | 40Gb | Linux filesystem
+/dev/sda4   | /pkgs | 40Gb | Linux filesystem
 /dev/sda5   | /home | 133Gb | Linux filesystem
 
 ### Particionamento em **deathstar**
@@ -94,6 +94,17 @@ Em **naberrie**:
 * Selecione a senha de root
 * Reinicie o computador
 
+## Atualizando softwares
+* Edite o arquivo /etc/slackpkg/mirrors para selecionar um mirror
+>slackpkg update gpg
+>slackpkg update
+>slackpkg upgrade slackpkg
+>slackpkg new-config
+>slackpkg upgrade glibc-solibs
+>slackpkg install-new
+>slackpkg upgrade-all
+>slackpkg clean-system
+
 ## Arquivos de configuração
 * Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.updates) para /etc/rc.d/
 * Copie o script boottime para /usr/local/sbin/ e dê permissão de executável
@@ -102,6 +113,6 @@ Em **naberrie**:
 
 * Copie o arquivo acpi_handler.sh para /etc/acpi/
 
-# 
+#
 
 
