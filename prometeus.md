@@ -96,7 +96,7 @@ Em **naberrie**:
 
 ## Conectar-se à internet
 Em **deathstar**:
-(loading...)
+* (loading...)
 
 Em **naberrie**:
 > ifconfig wlan0 up
@@ -130,9 +130,13 @@ Em **naberrie**:
 ## Arquivos de configuração
 * Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.update, rc.netservices) para /etc/rc.d/
 * Copie o script boottime para /usr/local/sbin/ e dê permissão de executável
+* Copie o arquivo de configuração do teclado keyboard-layout.conf para /etc/X11/xorg.conf.d/
 * Prepare o sistema para hibernação: adicione a linha abaixo em /boot/efi/EFI/Slackware/elilo.conf
 > append="resume=/dev/sda2"
 
 * Copie o arquivo acpi_handler.sh para /etc/acpi/
+* Crie uma base de dados para usar o comando _locate_:
+>updatedb
 
+*
 
