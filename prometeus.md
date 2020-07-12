@@ -127,6 +127,9 @@ Em **naberrie**:
 >
 >slackpkg clean-system
 
+* Incluindo o dicionário pt-br
+>slackpkg aspell-pt_BR-20131030_12_0-x86_64-1
+
 ## Arquivos de configuração
 * Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.update, rc.netservices) para /etc/rc.d/
 * Copie o script boottime para /usr/local/sbin/ e dê permissão de executável
