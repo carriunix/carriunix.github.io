@@ -138,5 +138,11 @@ Em **naberrie**:
 * Crie uma base de dados para usar o comando _locate_:
 >updatedb
 
-*
+## Ativando a placa de vídeo Nvidia
+Em **deathstar**:
+* Geforce 310M...
+
+Em **naberrie**:
+* Geforce MX230, usando o Nvidia Optimus, seguindo o que está descrito [aqui.](http://docs.slackware.com/howtos:hardware:nvidia_optimus)
+
 
