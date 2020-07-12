@@ -130,6 +130,16 @@ Em **naberrie**:
 * Incluindo o dicionário pt-br
 >slackpkg install aspell-pt_BR-20131030_12_0-x86_64-1
 
+## Criando o usuário padrão
+* Crie o usuário padrão:
+>adduser
+
+Abra um terminal (por alguma razão no urxvt não funciona direito) para editar o arquivo sudoers:
+>xterm visudo
+
+* E dê permissão de sudo para o usuário padrão, adicionando a linha:
+> user ALL=(ALL) ALL
+
 ## Arquivos de configuração
 * Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.update, rc.netservices) para /etc/rc.d/
 * Copie o script boottime para /usr/local/sbin/ e dê permissão de executável
@@ -140,6 +150,7 @@ Em **naberrie**:
 * Copie o arquivo acpi_handler.sh para /etc/acpi/
 * Crie uma base de dados para usar o comando _locate_:
 >updatedb
+
 
 ## Ativando a placa de vídeo Nvidia
 Em **deathstar**:
