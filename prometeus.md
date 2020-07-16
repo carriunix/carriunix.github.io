@@ -140,7 +140,7 @@ Abra um terminal (por alguma razão no urxvt não funciona direito) para editar 
 * E dê permissão de sudo para o usuário padrão, adicionando a linha:
 > user ALL=(ALL) ALL
 
-## Arquivos de configuração
+## Arquivos de configuração do sistema
 * Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.update, rc.netservices) para /etc/rc.d/
 * Copie o script boottime para /usr/local/sbin/ e dê permissão de executável
 * Copie o arquivo de configuração do teclado keyboard-layout.conf para /etc/X11/xorg.conf.d/
@@ -158,5 +158,8 @@ Em **deathstar**:
 
 Em **naberrie**:
 * Geforce MX230, usando o Nvidia Optimus, seguindo o que está descrito [aqui.](http://docs.slackware.com/howtos:hardware:nvidia_optimus)
+
+## Arquivos de configuração do fluxbox
+* Crie um link simbólico dos arquivos de .fluxbox para os arquivos em .padme/fluxbox
 
 
