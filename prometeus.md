@@ -143,6 +143,10 @@ Abra um terminal (por alguma razão no urxvt não funciona direito) para editar 
 ## Arquivos de configuração do sistema
 * Copie os rcscripts (rc.M, rc.local, rc.local_shutdown, rc.update, rc.netservices) para /etc/rc.d/
 * Copie o script boottime para /usr/local/sbin/ e dê permissão de executável
+* Criar link/copiar groundzero.sm para /usr/local/etc/
+* Carregar arquivo de configuração do cron:
+> crontab ~/.padme/sourcerymounth/tron.sm
+
 * Copie o arquivo de configuração do teclado keyboard-layout.conf para /etc/X11/xorg.conf.d/
 * Prepare o sistema para hibernação: adicione a linha abaixo em /boot/efi/EFI/Slackware/elilo.conf
 > append="resume=/dev/sda2"
@@ -161,5 +165,9 @@ Em **naberrie**:
 
 ## Arquivos de configuração do fluxbox
 * Crie um link simbólico dos arquivos de .fluxbox para os arquivos em .padme/fluxbox
+* Criar link/copiar clu.sm para ~/.bashrc
+
+
+
 
 
