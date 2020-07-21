@@ -167,6 +167,11 @@ Em **naberrie**:
 * Crie um link simbólico dos arquivos de .fluxbox para os arquivos em .padme/fluxbox
 * Criar link/copiar clu.sm para ~/.bashrc
 
+## Instale os aplicativos complementares do sistema
+
+## Edite o fstab para que /tmp seja montado na RAM
+
+
 
 
 
