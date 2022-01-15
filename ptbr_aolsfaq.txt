@@ -1,0 +1,886 @@
+alt.os.linux.slackware FAQ
+Wed Dec  8 12:39:43 -03 2021
+
+
+PARTE 0: Introdução
+
+    Bem-vindo ao FAQ alt.os.linux.slackware! Este FAQ foi criado para ajudar novos e 
+    não tão novos usuários do Slackware Linux com vários aspectos relacionados a 
+    instalar, executar e manter um sistema Slackware Linux. O FAQ está baseado 
+    principalmente nas trocas de mensagens no grupo (newsgroup) 
+    alt.os.linux.slackware. 
+
+    Sempre que possível, as informações fornecidas neste documento foram redigidas, 
+    portanto, elas não são específicas para nenhuma versão da distribuição do 
+    Slackware. Onde isso não foi possível, as respostas foram escritas para que eles 
+    aplicam-se à versão que era a versão estável atual no momento da escrita, (14.2 
+    no momento da última atualização deste FAQ). Quaisquer respostas aplicáveis 
+    apenas a versões mais antigas estão claramente identificadas como aplicáveis à 
+    versão mais recente do Slackware para o qual eles são conhecidos por serem 
+    aplicáveis.
+	
+    Este documento nunca teria sido possível sem os muitos contribuições de vários 
+    participantes do alt.os.linux.slackware newsgroup, listado no final deste 
+    documento. Quaisquer erros em conteúdo ou omissões são estritamente culpa do 
+    mantenedor do FAQ e não das pessoas cujas contribuições estão incluídas neste 
+    FAQ. Isso deve ser levado ao conhecimento do mantenedor do FAQ em 
+    aolsfaq-maintainer[at]therockgarden[dot]ca.
+
+    Quaisquer erros de tradução são estritamente culpa do tradutor do FAQ e não das 
+    pessoas cujas contribuições estão incluídas neste FAQ. Isso deve ser levado ao 
+    conhecimento do tradutor do FAQ em carriunix[at]gmail[dot]com.
+    
+Questões respondidas neste FAQ:
+
+    PARTE I: Questões gerais sobre o Slackware Linux
+      - Eu deveria usar o Slackware?
+      - Onde eu posso baixar o livro citado na página do Slackware?
+      - Qual a documentação vem com a minha instalação Slackware?
+      - Eu ainda preciso de ajuda! Que outra documentação existe em outro lugar na 
+        Internet?
+      - Há outros lugares para se discutir o Slackware?
+      - Quando a próxima versão do Slackware será lançada?
+      - Existe uma versão do Slackware para AMD64?
+      - E quanto ao Slackware em outras arquiteturas?
+      - Como reportar um bug no Slackware? / Como entrar em contato com Patrick 
+Volkerding?
+      - Onde está o programa de "setup" da instalação?
+      - O Slackware não suporta PAM? Todas as outras distribuições suportam!
+      - Como posso autenticar um cliente Slackware em um servidor LDAP sem PAM?
+      - SSL Jabber não funciona
+      - Onde está meu .bashrc? / Meu .bashrc não está aqui!
+      - Por que o $PACKAGE não está incluso no Slackware?
+      - Baixei uma imagem ISO. Posso visualizá-la antes de gravar em um CD?
+      - Por quê o Slackware trocou o XFree86 pelo X11 (X.org)?
+      - Por quê eu só consigo escrever no meu dispositivo FAT32 como root?
+      - Como eu habilito o acesso para escrever em minha partição NTFS?
+      - Por que não tenho áudio depois de configurar o login gráfico?
+      - Eu tenho uma pergunta sobre <derivado do Slackware> ...
+      - Por que o Slackware usa gz/xz em vez de bz2?
+      - Por que o KDE-4.2 no Slackware-13.0 é tão lento?
+      
+    PARTE II: Instalando o Slackware
+      - Onde eu consigo uma imagem ISO do Slackware?
+      - Como eu instalo o Slackware?
+      - Como posso instalar o Slackware via FTP?
+      - Como devo particionar meu disco rígido?
+    
+    
+PARTE I: Questões gerais sobre o Slackware Linux
+
+Eu deveria usar o Slackware?
+
+    É claro que deveria!  :-)
+
+    Slackware é uma distribuição Linux adequada para quase todos os tipos de 
+usuários. É 
+    muito estável e confiável, com manutenção ativa e tem um histórico muito bom de 
+    atualizações de segurança imediatas. Seja sua intenção configurar um servidor 
+web 
+    dedicado de forma remota, uma estação de trabalho baseada no popular ambiente KDE
+    ou qualquer coisa entre essas opções, o Slackware Linux é uma excelente escolha.
+	
+    O Slackware geralmente é considerado a melhor escolha para hardwares mais 
+antigos, 
+    como os PCs compatíveis com i486 e os primeiros baseados em Pentium. Na verdade, 
+um 
+    boa opção para muitos usuários que desejam aprender GNU/Linux, mas que não estão 
+    prontos para fazer isso sem o sistema operacional funcionando, é instalar o 
+Slackware 
+    em um máquina mais velha. Dessa forma, eles ainda podem ter o sistema 
+operacional que 
+    eles já estão acostumados em um computador mais novo, enquanto aprendem com o 
+    Slackware Linux no terminal ou em ambientes gráficos leves (ou via conexão de 
+rede, 
+    telnet ou ssh.)
+
+    No entanto, se você não gosta de ler documentações, deveria tentar outra 
+    distribuição. Todas as distribuições Linux têm uma curva de aprendizado e, se 
+você 
+    não ler a documentação, provavelmente não conseguirá que o Slackware Linux 
+funcione 
+    de maneira satisfatória.
+
+    Ao escolher uma versão do Slackware, prefira a versão estável mais recente que 
+será 
+    executada no hardware em que você deseja instalá-lo. Mesmo as versões mais 
+atuais do 
+    Slackware Linux irão rodar em sistemas muito modestos, ou antigos, se você puder 
+    usá-lo sem um ambiente gráfico (ou trabalhando com um gerenciador de janelas 
+leve).
+
+    A exceção é quando se deseja configurar uma máquina com um disco rígido muito 
+    pequeno: em tais casos, o Slackware 4.0 ou anterior é provavelmente preferível, 
+pois 
+    você poderá instalar mais software por megabyte usado. Um sistema Slackware 4.0 
+    funcionando em terminal pode ser muito útil e caber confortavelmente em um disco 
+    rígido de 100 MB.
+    
+Onde eu posso baixar o livro citado na página do Slackware?
+
+    (citando http://www.slackware.com/book/)
+
+	O guia oficial para o Slackware Linux, Slackware Linux Essentials foi 
+revisado 
+	recentemente. Se você deseja lê-lo online, visite a página do slackbook 
+	http://www.slackbook.org. Você também quiser comprar uma versão impressa, 
+visite
+	a Slackware Store!
+    
+    No momento da última atualização deste FAQ, a Slackware Store está fechada e não 
+deve 
+    retornar. Você ainda pode ler a última versão do slackbook, no link acima, nos 
+    formatos html, pdf ou postscript, ou acessar a versão beta em html. Um arquivo 
+epub 
+    da versão beta também está disponível no site slackdocs 
+    (http://docs.slackware.com/epub:slackbook).
+    
+    Uma versão traduzida para o português do Brasil está disponível na página do 
+Projeto 
+    Slackbook-pt_br (http://slackbookptbr.sourceforge.net/).
+    
+Qual a documentação vem com a minha instalação Slackware?
+
+    Preste atenção especial aos arquivos no diretório raiz da mídia de instalação. 
+    Alguns dos arquivos de particular interesse estão listados aqui, mas existem 
+    outros que contêm informações úteis.
+
+      - ANNOUNCE.*
+      - BOOTING.TXT
+      - CHANGES_AND_HINTS.TXT
+      - ChangeLog.txt
+      - FAQ.TXT
+      - README.TXT
+      - Slackware-HOWTO
+      - UPGRADE.TXT
+
+    Uma instalação completa do Slackware inclui bastante documentação:
+
+      - man pages:                        (e.g. "man lilo.conf")
+      - O sistema de ajuda FSF:           (e.g. "info -f find")
+      - Linux FAQs:                       /usr/doc/Linux-FAQs
+      - Linux HOWTOs:                     /usr/doc/Linux-HOWTOs
+      - Documentação de outros programas: /usr/doc
+      - Documentação do kernel:           /usr/src/linux/Documentation
+
+    Também existe a ajuda para configuração do kernel. Ao configurar seu kernel, 
+você 
+    pode obter ajuda em cada item de configuração. Nem todos os itens têm ajuda, mas 
+a 
+    maioria tem. Os kernels da série 2.6 introduziram o 'make help' e oferecem uma
+    função de pesquisa em 'make menuconfig': / <search_term>.
+
+    Os scripts em /etc/rc.d são geralmente bem comentados e podem explicar muito 
+sobre o 
+    que acontece quando o sistema é inicializado, e o script /etc/rc.d/rc.modules 
+    descreve resumidamente quase todos os módulos do kernel listados nele.
+    
+Eu ainda preciso de ajuda! Que outra documentação existe em outro lugar na Internet?
+
+    Existe, é claro, o newsgroup alt.os.linux.slackware, preenchido por uma 
+variedade de 
+    usuários do Slackware Linux, com experiências e níveis de conhecimento variados 
+sobre 
+    diversos aspectos da execução de um sistema Slackware Linux. Não importa qual 
+seja o 
+    problema que você possa encontrar no Slackware Linux, é muito provável que haja 
+    alguém que frequenta este newsgroup com conhecimento suficiente para tentar 
+ajudar ou 
+    pelo menos ajudá-lo a apontar na direção certa.
+
+    Provavelmente, vale a pena pesquisar no newsgroup usando o google por mensagens 
+mais 
+    antigas que podem ter expirado no servidor de notícias que você usa. Se outra 
+pessoa 
+    já teve o mesmo problema e já o resolveu, você pode aprender com a experiência 
+    adquirida naquele tópico de discussão. 
+    http://groups.google.com/group/alt.os.linux.slackware
+
+    Documentação própria do Slackware
+    http://www.slackware.com/
+    ftp://ftp.slackware.com/pub/slackware/  (arquivos .txt separados por versão)
+    
+    O Projeto de Documentação Slackware
+    http://docs.slackware.com/start
+
+    O livro oficial do Slackware
+    http://www.slackbook.org/
+    http://slackbookptbr.sourceforge.net/ (em português)
+
+    Slackware Wiki
+    https://slackwiki.com/Main_Page
+
+    Wikipedia possui um verbete
+    http://en.wikipedia.org/wiki/Slackware
+
+    Outros FAQs sobre Slackware
+    http://www.slackware.com/faq/
+    http://wiki.linuxquestions.org/wiki/Slackware-FAQ
+
+    "How to Install and Run Slackware" (escrito para o Slackware-13, mas não tão 
+específico 
+    com relação a essa versão; observe os comentários e as respostas dos leitores 
+sugerem 
+    que algumas das informações do autor e da experiência com o Slackware estão 
+    desatualizadas, mas os próprios comentários ajudam o artigo a ser mais 
+atualizado; 
+    por si só, este artigo deve pelo menos ajudar alguém a executar em um sistema 
+    Slackware com bastante facilidade)
+    http://www.maketecheasier.com/install-and-run-slackware-13/
+
+    Alguns sites de ajuda para Linux em geral
+    http://www.linuxguruz.com/
+    http://www.justlinux.com/nhf/
+    https://www.vivaolinux.com.br/ (em português)
+
+    O Projeto de Documentação Linux
+    http://www.tldp.org/
+
+    O kernel
+    http://www.kernel.org/
+    http://www.kernelnewbies.org/
+
+    Firewalls
+    https://www.frozentux.net/2018/04/iptables-tutorial-work/
+
+    X Window System
+    http://www.x.org/
+
+    Documentação Software-especifica:
+    A maioria dos pacotes de software tem sites com documentação para as versões 
+atuais de 
+    seus pacotes. Eles geralmente podem ser encontrados pesquisando pelo nome do 
+pacote em
+    http://sourceforge.net/
+    http://freshmeat.net/  (aka https://sourceforge.net/ ...)
+    https://github.com/
+
+    Se tudo mais falhar ...
+    http://www.google.com/
+    
+Há outros lugares para se discutir o Slackware?
+
+    Além do grupo de notícias alt.os.linux.slackware, existem muitos outros lugares 
+para 
+    discutir o Slackware. Uma busca na web fornecerá links para muitos, mas aqui 
+estão 
+    alguns para sua conveniência:
+
+    Um newsgroup de usuários de Slackware em português:
+    http://groups.google.com/group/slack-users-br
+
+    LinuxQuestions.org - Slackware: "onde Linux newbies procuram ajuda"
+    https://www.linuxquestions.org/questions/slackware-14/
+
+    Uma mailing list pública
+    http://mailman.lug.org.uk/mailman/listinfo/slackware
+
+    IRC
+    https://libera.chat/ has some channels:
+    - ##slackware
+    - #slackware-br (em português)
+    - #slackbuilds
+    - #slackdocs
+
+    https://services.oftc.net/
+    - #slackware
+    
+    
+Quando a próxima versão do Slackware será lançada?
+
+    O próprio FAQ do Slackware diz o seguinte sobre o assunto:
+    (http://www.slackware.com/faq/do_faq.php?faq=general#4)
+
+      Normalmente é nossa política não especular sobre as datas de lançamento, uma 
+vez que 
+      isso é o que é - pura especulação. Nem sempre é possível saber quanto tempo 
+levará 
+      para fazer as atualizações necessárias e amarrar todas as pontas soltas. 
+Conforme as 
+      coisas forem sendo preparadas para o próximo lançamento, elas serão carregadas 
+na 
+      árvore do -current. Se o -current não existe, provavelmente significa que 
+acabamos de 
+      lançar uma nova versão do Slackware. Uma nova árvore -current será formada 
+logo após
+      o lançamento da nova versão.
+
+    Se você acompanhar a página www.slackware.com, encontrará anúncios quando novos 
+    lançamentos estiverem disponíveis.
+
+    Uma pista de que um lançamento oficial está próximo é quando HOWTOs,FAQ e 
+imagens de 
+    boot estão sendo preparados. Acompanhe o CHANGELOG do -current para ter uma 
+ideia 
+    aproximada de quão perto pode estar o próximo lançamento.
+    
+Existe uma versão do Slackware para AMD64?
+
+    O Slackware está disponível na forma de 32 bits (para sistemas x86 compatíveis 
+com 
+    Intel) ou como um sistema de 64 bits, Slackware64, compilado para aproveitar ao 
+    máximo o poder de processamento do x86_64. Esta possivelmente se tornou a versão 
+mais 
+    amplamente implantada do Slackware. O Slackware64 também pode ser adaptado para 
+    funcionar com software de 32 bits, fornecendo suporte de biblioteca devidamente 
+    compilada, conforme descrito em http://www.slackware.com/~alien/multilib/ e 
+    https://docs.slackware.com/pt-br:slackware:multilib (em português).
+
+    Historicamente, para satisfazer aqueles que queriam o Slackware de 64 bits 
+quando ele 
+    não estava oficialmente disponível no Slackware, Fred Emmott produziu um porte 
+não 
+    oficial, chamado slamd64. Esse porte parece não estar mais disponível.
+    
+E quanto ao Slackware em outras arquiteturas?
+
+    Existe uma versão do Slackware para a arquitetura ARM, ativamente desenvolvida e 
+    mantida desde 2002 (e como uma versão oficial desde 2007), por Stuart Winter. 
+    Consulte http://arm.slackware.com/ para obter detalhes.
+    
+    Ao longo dos anos, surgiram portes para as plataformas S/390, SPARC e Alpha, mas
+    nenhuma se manteve atualizada e acabaram sendo descontinuadas. Portes não 
+oficiais 
+    para a plataforma Alpha (*e outras?*) já apareceram e desapareceram, mas nenhuma 
+    ainda foi lançada como uma distribuição Linux completa portada do Slackware.
+
+    Se quiser, você é mais que bem-vindo para portar o Slackware para outras 
+    arquiteturas, mas não pode chamá-lo de Slackware sem a permissão explícita de
+    Patrick Volkerding.
+    
+Como reportar um bug no Slackware? / Como entrar em contato com Patrick Volkerding?
+
+    As informações de contato do Slackware estão listadas em: 
+    http://www.slackware.com/contact/
+
+    Conforme observado nessa página, lembre-se de que eles recebem muitos e-mails. 
+    Certifique-se de ler o FAQ do Slackware apontado acima e qualquer outra 
+documentação 
+    relevante antes de enviar um e-mail. (Veja "Eu ainda preciso de ajuda! Que outra 
+    documentação existe em outro lugar na Internet?", "Outros FAQs sobre Slackware")
+
+    Existem locais apropriados para discutir possíveis bugs antes de relatá-los, 
+como o 
+    fórum linuxquestions.org, também apontado acima. (veja "Há outros lugares para 
+se 
+    discutir o Slackware?")
+
+    A discussão de possíveis bugs geralmente ocorre no newsgroup 
+alt.os.linux.slackware
+    e esta pode ser uma boa maneira de confirmar se o comportamento visto realmente 
+é 
+    um bug ou um erro do operador, como um erro de configuração local. No entanto, 
+    deve-se notar que Patrick Volkerding normalmente não participa do grupo de 
+notícias e 
+    as pessoas que ajudam no desenvolvimento do Slackware são vistas com mais 
+frequência 
+    em linuxquestions.org, então se você tiver certeza de que o que você tem em mãos 
+é um 
+    bug específico para o Slackware, postar no grupo de notícias provavelmente 
+resultará 
+    em respostas solicitando que você visite linuxquestions.org e reporte o bug lá.
+    
+Onde está o programa de "setup" da instalação?
+
+    O script /sbin /setup em versões mais antigas do Slackware permitia o acesso 
+rápido
+    a vários scripts de configuração do sistema. Os scripts de configuração ainda 
+estão lá,
+    mas o "setup" se foi. Você pode executar cada um dos estes independentemente:
+
+      ferramentas de pacote:
+         pkgtool 	instalar/remover/visualizar pacotes, executar novamente os 
+scripts de configuração
+         explodepkg 	extrai um pacote compatível com Slackware
+         installpkg 	instala um pacote .tgz compatível com Slackware
+         makepkg 	cria um pacote .tgz compatível com Slackware
+         removepkg 	remove um pacote instalado
+         upgradepkg 	atualiza um pacote Slackware .tgz
+
+      ferramentas do sistema:
+         adduser 	maneira fácil de adicionar contas de usuário
+         makebootdisk 	cria um disco de inicialização SYSLINUX
+         mkrescue 	cria um CDROM ou disquete de resgate
+
+      ferramentas de configuração:
+         fontconfig 	seleciona fontes para X
+         make-bootdisk 	cria um disco de inicialização
+         modem-device 	selecione o seu dispositivo modem
+         hotplug 	habilitar hotplug na inicialização
+         liloconfig 	cria o arquivo lilo.conf
+         mouse 		selecione o mouse e habilite o gpm
+         netconfig 	configure as conexões de rede
+         services	selecionam quais serviços executar na inicialização
+         setconsolefont selecionar fontes especiais do console
+         timeconfig	selecione seu fuso horário
+         xorgsetup 	configure o X para se adequar ao seu sistema
+         xwmconfig 	define seu gerenciador de janela/área de trabalho padrão
+
+    O pkgtool também pode executar muitos dos scripts de configuração para você. 
+Escolha a
+    última opção antes de "quit" (sair) que diz "choose installation scripts to run 
+again"
+    (escolher scripts de instalação para executar novamente). Você escolhe os 
+scripts a 
+    serem executados com a barra de espaço e teclas de seta.
+
+    Além disso, observe que xorgsetup e xwmconfig estão em /usr/X11R6/bin,que pode 
+não 
+    estar em seu path.
+
+    Veja as man pages de cada uma dessas ferramentas para detalhes adicionais sobre 
+como 
+    executá-los, opções disponíveis, etc.
+
+O Slackware não suporta PAM? Todas as outras distribuições suportam!
+
+    O Slackware, em versões até 14.2 (inclusive) não usa ou inclui o PAM, embora é 
+claro 
+    que você está livre para instalar e usá-lo em seus próprios sistemas. Você pode 
+obter 
+    a explicação do próprio Patrick Volkerding para omitir o PAM no ChangeLog do 
+    Slackware 9.1, citada aqui:
+
+      Se você vir o relato de um problema de segurança que depende do PAM, você pode 
+ser 
+      feliz que você execute Slackware. Eu acho que um nome melhor para o PAM pode 
+ser 
+      SCAM, para módulos de autenticação de queijo suíço, e nunca achei que a 
+pequena 
+      quantidade de conveniência que ele oferece vale a grande perda de segurança do 
+      sistema. Sentimos falta de meia dúzia de problemas de segurança por ano, não 
+usando o 
+      PAM, mas você pode sempre instalá-lo se sentir que está perdendo a diversão. 
+(Não, 
+      não faça isso)
+
+    No início de 2020, esta postura aparentemente mudou, e o PAM apareceu no 
+    Slackware-current, preparando-se para a liberação Slackware-15.0. Depois de 
+alguns 
+    meses de pacotes habilitados para PAM estarem disponíveis para testes, foi 
+finalmente 
+    mesclado na árvore principal da distribuição e será encontrada em versões 
+futuras do 
+    Slackware.
+
+Como posso autenticar um cliente Slackware em um servidor LDAP sem PAM?
+
+    If you've read above, you know that Slackware versions prior to 15.0 don't 
+support 
+    PAM, but the most common way of configuring a linux client to authenticate 
+against an 
+    LDAP server is to use PAM. What to do?  The obvious response would be to upgrade 
+the 
+    system that needs LDAP authentication to Slackware-15.0 after it gets released 
+(or to 
+    Slackware-current if the system can't wait for the release), but what if for 
+some 
+    reason (though it seems like a rather remote possibility) the system is best 
+kept 
+    running an older version of Slackware?
+
+    Se você leu acima, você sabe que versões do Slackware anteriores a 15.0 não 
+suportam 
+    o PAM, mas a maneira mais comum de configurar um cliente Linux para autenticar 
+em um 
+    servidor LDAP é usar o PAM. O que fazer? A resposta óbvia seria atualizar o 
+sistema 
+    que precisa de autenticação LDAP no Slackware-15.0 depois de ser liberado (ou 
+para 
+    Slackware-current se o sistema não puder esperar pelo lançamento), mas e se, por 
+    algum motivo (embora pareça Uma possibilidade bastante remota), for melhor 
+manter o 
+    sistema rodando uma versão mais antiga do Slackware?
+
+    Bem, um método é usar o software nss_ldap fornecido pela PADL 
+(http://www.padl.com). 
+    Você precisará obter e instalar o software, mas é muito mais fácil do que 
+instalar o 
+    PAM. O procedimento básico é o seguinte:
+
+    - Instale o nss_ldap no cliente.
+    [FIX ME: alguns diretórios LDAP podem ser configurados para permitir vinculação 
+    anônima com o objetivo de autenticar usuários. As etapas a seguir não devem ser 
+    necessárias nesses casos]
+    [--------------------------------------------------------------]
+    - Obtenha do administrador do servidor LDAP uma conta LDAP que tenha a 
+capacidade de 
+    ler (pelo menos, escrever é útil) todas as informações de login apropriadas. Em 
+    particular, esta conta deve ter pelo menos acesso de leitura ao atributo 
+userPassword 
+    de todas as contas a serem usadas no cliente Slackware.
+    - Configure esse DN em ldap.conf como rootbinddn.
+    - Crie um arquivo /etc/ldap.secret e adicione a senha do rootbinddn (texto 
+puro!) à 
+    primeira linha do arquivo. Adicione uma nova linha final.
+    [--------------------------------------------------------------]
+    - Modifique /etc/nsswitch.conf para autenticar no LDAP. Você provavelmente vai 
+querer 
+    modificar pelo menos a senha, group e shadow. É melhor adicionar o LDAP após a 
+    entrada dos arquivos para cada banco de dados (ou em uma ordem apropriada, se 
+você 
+    usar coisas como nis). (Pessoalmente, não recomendo usar o modo compat se também 
+    estiver usando nis ou ldap.)
+
+    Isso é tudo que você precisa fazer - não deve ser necessário reiniciar os 
+daemons.
+
+
+    [FIX ME: Essa seção ainda se aplica?                           ]
+    [--------------------------------------------------------------]
+SSL Jabber não funciona
+
+    Os pacotes OpenSSL fornecidos com o Slackware (versões 8.0 a 9.0's) não 
+funcionam com 
+    Jabberd. O Jabberd relata o erro:
+    mio_ssl.c:93 Could not create SSL Context: error:140A90A1:SSL
+    routines:SSL_CTX_new:library has no ciphers
+    Quando ele carrega e tenta usar sua chave SSL. A correção é baixar o 
+código-fonte 
+    OpenSSL e compilá-lo você mesmo, com o procedimento ./configure && make && make 
+    install. Ele irá para /usr/local/ssl, sem interferir com os pacotes SSL do 
+Slackware. 
+    Faça um make clean em seu diretório de origem do Jabberd e, em seguida,
+
+    ./configure --enable-ssl && make
+
+    e o Jabberd deve funcionar corretamente com o OpenSSL agora.
+    [--------------------------------------------------------------]
+
+Onde está meu .bashrc? / Meu .bashrc não está aqui!
+
+    Ao contrário de quase todas as outras distribuições, o Slackware não vem com um 
+    .bashrc padrão, portanto, nenhum arquivo desse tipo aparece por padrão em seu 
+    diretório home. Não há nada de especial ou mágico sobre este ou qualquer dotfile 
+    (arquivo de configuração oculto). Simplesmente crie um arquivo .bashrc com o 
+editor 
+    de sua escolha. O conteúdo geralmente se resume a definir variáveis e opções de 
+shell 
+    e definir apelidos e / ou funções, bem como executar quaisquer comandos que você 
+    desejar. Veja a man page do bash para detalhes.
+
+Por que o $PACKAGE não está incluso no Slackware?
+
+    Porque não é. Uma pessoa controla o que é chamado de "Slackware", e essa pessoa 
+1.) 
+    não quis incluir, ou 2.) não pensou sobre isso. Em ambos os casos, você pode 
+obter 
+    uma resposta confiável entrando em contato com o Slackware diretamente (consulte 
+    http://www.slackware.com/contact/ para obter detalhes). As pessoas no newsgroup 
+    alt.os.linux.slackware não têm uma palavra a dizer sobre qual software será 
+incluído 
+    no Slackware.
+
+Baixei uma imagem ISO. Posso visualizá-la antes de gravar em um CD?
+
+    Sim. Você precisa carregar o módulo loop.o em seu kernel ou compilá-lo no 
+próprio 
+    kernel. insmod loop.o deve fazer isso. Isso permitirá que você monte a imagem 
+ISO 
+    como um pseudo disco e execute o gerenciamento de arquivos nele. Eu recomendo a 
+    montagem como leitura apenas para proteger o arquivo.
+
+    Para montar um arquivo ISO, como root digite:
+      mount -t iso9660 -o ro,loop filename mountpoint
+
+    onde filename é o link ou nome do arquivo completo e extensão da imagem ISO, e 
+    mountpoint deve ser um diretório existente no qual a imagem será montada.
+
+    Então, você pode entrar no ponto de montagem e ler o conteúdo do arquivo 
+diretamente!
+    
+Por quê o Slackware trocou o XFree86 pelo X11 (X.org)?
+
+    As razões para mudar do XFRee86 para o X11R6 (x.org) foram dadas no ChangeLog do 
+    Slackware 10:
+
+      +--------------------------+
+      Sun May 30 01:06:39 PDT 2004
+      [...]
+      x/: Mudando para o X11R6.7.0 de X.org. Obrigado àqueles que enviaram 
+comentários para 
+	  x[at]slackware.com. Parece que a comunidade se pronunciou, porque as 
+proporção das 
+	  opiniões eram mais de 4 para 1 em favor de usar a versão X.org como a 
+versão padrão 
+	  de X. Acho que ouvi todos os lados sobre esse problema agora, e foi apenas 
+após uma 
+	  consideração cuidadosa e testar que esta decisão foi tomada. É 
+principalmente (como
+	  é habitual por aqui) uma decisão técnica. Quase todo mundo está indo com o 
+x.org e 
+	  parece-me que ficar com o XFree86 apesar disso seria pedir por problemas 
+de 
+	  compatibilidade (de fato, vimos alguns problemas entre X.org e XFree86 
+4.4.0 até 
+	  algumas coisas em XFree86 precisaram de patch). Eu também notei que os 
+drivers 
+	  binários ATI Radeon projetados para XFree86 4.3.0 não funcionam com o 
+XFree86 4.4.0, 
+	  mas funcionam com o lançamento do X.org. Algo que eu *não* sou a favor é 
+de arrastar 
+	  cerca de dois projetos quase idênticos, então xFree86 4.4.0 foi movido 
+para o 
+	  diretório /pub/slackware/unsupported/ no site FTP.
+	  
+Por quê eu só consigo escrever no meu dispositivo FAT32 como root?
+
+    Para que essas partições sejam graváveis ​​por um usuário sem privilégios, você 
+    precisa passar as opções para montar (através da linha de comando ou fstab). 
+Existem 
+    várias combinações de opções que você pode dar. Alguns exemplos se seguem, mas a 
+man 
+    page do mount fornece detalhes mais completos, lista as opções adicionais 
+disponíveis 
+    e fornece exemplos próprios.
+
+    - Você pode adicionar uma linha semelhante à seguinte ao /etc/fstab, de modo que 
+o 
+    usuário (privilegiado ou não) monta o sistema de arquivos pode escrever nele:
+
+      /dev/XXX    /xxx   vfat   user       0   0
+
+    - Usando mount na linha de comando, para permitir que um UID e/ou GID específico 
+    escreva no sistema de arquivos, você pode usar:
+
+      mount -o uid=1000,gid=102,rw /dev/XXX /xxx
+
+    - Usando mount na linha de comando, você pode definir o UMASK para permitir que 
+todos 
+    os usuários gravem na unidade (este método não é recomendado, pois permite que 
+    qualquer usuário, confiável ou não, gravar no sistema de arquivos montado):
+
+      mount -o umask=000,rw /dev/XXX /xxx
+
+    Qualquer um desses métodos pode ser combinado (por exemplo, usando UID, GID e 
+Umak 
+    juntos para permitir que todo o grupo escreva para a unidade). Como mencionado 
+acima, 
+    consulte a man page do mount para detalhes adicionais.
+    Veja também https://slackwiki.com/Windows_Partitions para mais informações.
+    
+Como eu habilito o acesso para escrever em minha partição NTFS?
+
+    NTFS é um alvo em movimento e, enquanto o suporte de leitura é maduro, o suporte 
+de 
+    gravação não é. Se você ativar o suporte de gravação na sua partição NTFS, há 
+uma 
+    alta probabilidade de corromper a partição e fazer parte ou todos os seus dados 
+    inacessíveis no Linux ou Windows. No entanto, se você está se sentindo corajoso, 
+você 
+    pode fazer isso ativando o suporte de gravação no módulo do kernel. No kernel 
+2.6 
+    você encontrará esta opção aqui:
+
+      Symbol: NTFS_RW [=n]
+	Prompt: NTFS write support
+	  Defined at fs/Kconfig:733
+	  Depends on: NTFS_FS
+	  Location:
+	    -> File systems
+	      -> DOS/FAT/NT Filesystems
+		-> NTFS file system support (NTFS_FS [=m])
+
+    [FIX ME: Alguém, por favor, confirme essa parte ...]
+    [--------------------------------------------------------------]
+    Você também precisará explicitamente montar a unidade para leitura e gravação. O 
+    comando a seguir funciona para mim. Basta mudar seus pontos de montagem e 
+partição.
+
+      mount -t ntfs /dev/hda1 /mnt/ntfs -o rw
+    [--------------------------------------------------------------]
+
+Por que não tenho áudio depois de configurar o login gráfico?
+
+    O Slackware adiciona automaticamente o usuário autenticado através do console 
+para 
+    determinados grupos como audio e cdrom. No entanto, os gerenciadores de login 
+    gráficos nativos do Slackware não suportam esse recurso. Você precisará 
+adicionar 
+    manualmente esses usuários a esses grupos ou alterar permissões em determinados 
+    arquivos /dev.
+
+Eu tenho uma pergunta sobre <derivado do Slackware> ...
+
+    Embora possa haver alguém no newsgroup alt.os.linux.slackware, que sabe o 
+suficiente 
+    sobre a distribuição derivada que você está usando, por favor, tenha em mente 
+que os 
+    leitores do grupo provavelmente não são tão familiares com a distribuição 
+derivativa 
+    como eles estão com Slackware. Há uma chance muito boa que a distribuição que 
+você 
+    está usando tem seus próprios canais de suporte e sua própria comunidade de 
+usuários 
+    que podem ser capazes de fornecer ajuda _melhor_ com essa distribuição do que as 
+    pessoas que freqüentam alt.os.linux.slackware podem.
+
+    Dito isto, se você acredita que uma postagem para alt.os.linux.slackware 
+    provavelmente obterá a ajuda que você está procurando ou você é incapaz de obter 
+    ajuda suficiente da própria comunidade de usuários da distribuição derivada, 
+você 
+    verá que quanto mais claramente você descreve o problema, sem esquecer de 
+mencionar 
+    qual distribuição do Linux você está usando, mais fácil será para os outros 
+tentarem 
+    ajudar.
+
+Por que o Slackware usa gz/xz em vez de bz2?
+
+    O Slackware é uma das poucas grandes distribuições do Linux que ainda podem ser 
+    facilmente instaladas em muitos computadores mais antigos (incluindo Pentiums e 
+486s, 
+    pelo menos até as versões Slackware-12.x). Enquanto o bz2 pode oferecer uma 
+    compactação ligeiramente melhor de pacotes, a quantidade de tempo que essas 
+máquinas 
+    mais antigas levam para descomprimir arquivos bz2 é muito maior do que o 
+necessário 
+    para o gz. Assim, o Slackware usou tradicionalmente gzip para compressão de seus 
+    pacotes. Desde o lançamento do Slackware-13.0, a distribuição envia pacotes 
+    comprimidos com "xz", em um esforço para encontrar um verdadeiro compromisso 
+entre a 
+    taxa de compressão e o desempenho de descompressão.
+
+Por que o KDE-4.2 no Slackware-13.0 é tão lento?
+
+    O KDE-4.2, conforme distribuído com o Slackware-13.0, inclui um daemon de 
+indexação 
+    de arquivo que é executado por padrão. O Strigi é projetado para fornecer 
+indexação 
+    completa de arquivos no KDE que supostamente tem um desempenho melhor do que as 
+    alternativas. No entanto, o indexador de arquivos Strigi incluído no KDE-4.2 
+consome 
+    uma quantidade excessiva de recursos e faz isso quase constantemente. Isso faz 
+com
+    que o sistema pareça estar paralisado. Se você estiver tendo problemas de 
+desempenho,
+    como o disco rígido constantemente em uso ou a CPU sempre ativa, você pode 
+tentar 
+    desabilitar o Strigi indo em Configurações do sistema, na guia Avançado ou em 
+    Pesquisa na área de trabalho. A partir daí, você pode desativar o indexador de 
+    arquivos. Isso deve acelerar as coisas consideravelmente.
+
+
+PARTE II: Instalando o Slackware
+
+Onde eu consigo uma imagem ISO do Slackware?
+
+    Existem várias opções listadas em
+    http://www.slackware.com/getslack/
+
+    Uma lsita de mirrors do Slackware está disponível em
+    https://mirrors.slackware.com/mirrorlist/
+
+    Este link mostra o histórico de versões do Slackware:
+    http://slackware.cs.utah.edu/
+    
+Como eu instalo o Slackware?
+
+    As instruções de instalação estão incluídas com cada conjunto de CDs do 
+Slackware, na 
+    forma de um pequeno livreto e como arquivos de texto no CD de instalação. 
+    
+    O site do Slackware também possui a documentação útil em 
+    http://www.slackware.com/install/
+    
+    As versões mais recentes do Slackware (desde o Slackware-8.1) incluem um 
+documento 
+    HOWTO de instalação, no diretório raiz do primeiro disco de instalação, e também 
+    disponível no seguinte URL:
+    
+    ftp://ftp.slackware.com/pub/slackware/slackware/Slackware-HOWTO
+
+    O HOWTO também está disponível em vários mirrors. Veja a URL "getslack" acima 
+para 
+    mais detalhes sobre os mirrors.
+
+    O projeto SlackDocs possui um artigo sobre a instalação do Slackware:
+    http://docs.slackware.com/pt-br:slackware:install
+    
+Como posso instalar o Slackware via FTP?
+
+    O Slackware não oferece a opção de instalação via FTP. A única opção de instalação 
+    baseada em rede é o NFS. Você pode configurar o NFS em um sistema já em execução e 
+    baixar os arquivos de instalação lá, para instalar em seu sistema de destino. A menos 
+    que você já use o NFS por outros motivos ou não tenha outra opção (por exemplo,não  
+    possua unidade de CD, entrada USB, etc no sistema de destino), essa abordagem pode 
+    não valer o esforço.
+
+    Existe uma maneira não oficial de instalar o Slackware-current a partir da rede sobre 
+    http ou ftp usando a imagem mini ISO mantida por AlienBOB. Você encontrará mais 
+    informações em http://www.slackware.com/~alien/slackboot/mini/
+    
+Como devo particionar meu disco rígido?
+
+    Esta pergunta normalmente receberá tantas respostas diferentes quanto o número de 
+    pessoas respondendo e qualquer uma delas pode ser adequada para o seu sistema. Ainda 
+    assim, o que é apresentado aqui é uma abordagem geralmente aceita para particionar um 
+    único disco rígido para uma instalação do Linux.
+
+    A maneira mais fácil de particionar seu sistema é, obviamente, não particionar de 
+    forma alguma. Ou melhor, criar uma partição swap no início do disco e deixar o resto 
+    como uma partição grande para /. Observe, entretanto, que a BIOS na maioria dos 
+    sistemas mais antigos não conseguiam inicializar a partir de uma partição que ocupava 
+    espaço além de um certo número de cilindros no disco. Em tais sistemas, a primeira 
+    partição do disco deve ser criada de forma que não seja maior que esse limite, e esta 
+    partição deve ser aquela que contém o kernel do sistema operacional (muitas pessoas 
+    montam isso como /boot, enquanto outras movem os kernels do sistema para fora para o 
+    diretório raiz "/" e usa esta primeira partição menor como "/").
+
+    Normalmente é necessário ter pelo menos uma partição swap e há vários motivos pelos 
+    quais você pode decidir dividir várias outras partes do sistema em partições de disco 
+    separadas.
+
+    Por exemplo, pode ser uma boa ideia colocar /home e /usr/local em partições 
+    separadas. Dessa forma, você pode atualizar para uma versão mais recente do Slackware 
+    sem ter que sobrescrever seus dados pessoais e os programas que você instalou da 
+    fonte. Ainda é aconselhável fazer backups completos de todas as informações que você 
+    considere importantes, mas ter essas árvores de diretório como sistemas de arquivos 
+    separados ajudará a garantir que as atualizações e novas instalações não farão com 
+    que você perca seus dados.
+
+    Em vez de criar duas partições para /home e /usr/local, você também pode criar apenas 
+    uma. Crie um diretório /usr/local/home nesta partição e faça um link simbólico de 
+    /home para /usr/local/home. Dessa forma, /home e /usr/local fazem uso da mesma 
+    partição, o que significa que você não precisa decidir qual partição deseja tornar a 
+    maior.
+
+    A próxima questão geralmente é o tamanho que as várias outras partições devem ter. É 
+    claro que isso depende muito do que você deseja instalar e como deseja usar o 
+    sistema. Uma instalação completa do Slackware 14.2 (com KDE) leva cerca de 15 GB, aos 
+    quais você terá que adicionar algum espaço livre. Portanto, para uma instalação 
+    completa, você precisará fornecer ao / pelo menos 4 GB (5 GB seria melhor). É claro 
+    que você pode usar menos se não fizer uma instalação completa. O resto do disco 
+    rígido pode ser dividido entre /home e /usr/local.
+
+    Para ajudá-lo a obter uma visão adicional pode ser interessante ler um guia rápido 
+    para esquemas de partição Linux em 
+    http://www.maketecheasier.com/quick-guide-to-linux-partition-schemes/
+ 
+ Quanto espaço de swap devo usar?
+
+    O truque é saber dois números.
+
+    Primeiro determine a quantidade de memória que o sistema usará sob seus picos de 
+    carga esperados. Na maioria das vezes, esse número será um palpite fundamentado nas 
+    melhores circunstâncias, portanto, vale a pena ser generoso aqui. Em segundo lugar, 
+    determine quanta memória física você pode colocar no sistema de computador ou que o 
+    sistema será capaz de reconhecer e usar. Isso já pode ser determinado pela memória 
+    atualmente instalada no sistema de destino.
+
+    A swap deve ser pelo menos tão grande quanto a diferença entre os dois números acima.
+
+    Tem havido várias "regras de ouro" ao longo dos anos que o espaço de troca para um 
+    sistema Unix ou Linux deve ser igual a um múltiplo par da quantidade de RAM física no 
+    sistema (com, em alguns casos, uma quantidade extra grande o suficiente para manter 
+    uma cópia do kernel do sistema). Em sistemas operacionais que produzem um arquivo 
+    kernel + core ao se recuperar de uma falha do sistema, essa regra prática é 
+    razoavelmente aplicável, mas o Linux não é esse sistema, então o único requisito real 
+    para espaço de swap é determinado pela diferença entre como quanta memória o sistema 
+    precisará usar e quanta memória física pode ser instalada nele.
+
+    Observe que a opção suspender do kernel Linux usa a partição swap para armazenar a 
+    imagem da memória. Se você planeja usar este recurso, certifique-se de configurar uma 
+    partição swap de tamanho apropriado.
+    
+ (Tradução em andamento...)
