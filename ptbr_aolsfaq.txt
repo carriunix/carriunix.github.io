@@ -1,6 +1,5 @@
 alt.os.linux.slackware FAQ
-Wed Dec  8 12:39:43 -03 2021
-
+Tue Feb  1 23:17:50 UTC 2022
 
 PARTE 0: Introdução
 
@@ -856,8 +855,8 @@ Como devo particionar meu disco rígido?
     Para ajudá-lo a obter uma visão adicional pode ser interessante ler um guia rápido 
     para esquemas de partição Linux em 
     http://www.maketecheasier.com/quick-guide-to-linux-partition-schemes/
- 
- Quanto espaço de swap devo usar?
+    
+Quanto espaço de swap devo usar?
 
     O truque é saber dois números.
 
@@ -882,5 +881,70 @@ Como devo particionar meu disco rígido?
     Observe que a opção suspender do kernel Linux usa a partição swap para armazenar a 
     imagem da memória. Se você planeja usar este recurso, certifique-se de configurar uma 
     partição swap de tamanho apropriado.
+    
+Por que existem tantas histórias sobre alocação de espaço de troca?
+
+    Bem, *existe* uma razão lógica para a regra prática de que a troca deve ser 2 vezes a 
+    quantidade de RAM, ela simplesmente não se aplica ao Linux, é só isso.
+
+    Em sistemas derivados de versões mais antigas do BSD (não tenho certeza exatamente 
+    qual versão do BSD, mas Ultrix e SunOS 4 são exemplos de UNIXen comerciais para os 
+    quais isso é verdade) o algoritmo de swapping aloca swap imediatamente para toda a 
+    memória alocada pelo kernel . O que significa que quando um programa é carregado, o 
+    espaço de swap é sobrecarregado. Além disso, quando um programa chama brk() ou sbrk() 
+    para obter mais memória, o espaço de troca é imediatamente alocado.
+
+    Portanto, no mínimo absoluto, para que o sistema use sua RAM, *deve* *haver* uma 
+    relação de 1:1 entre a RAM e o espaço de swap. Se o sistema tiver memória virtual 
+    além dos limites da RAM física, a swap deve ser aumentada além de 1:1. O tamanho da 
+    memória virtual é exatamente o tamanho da swap.
+
+    Daí a "regra prática: a swap deve ser o dobro do tamanho da RAM", o que permite 
+    exatamente o dobro da memória para programas carregados do que a RAM física. (E essa 
+    era a carga máxima que razoável rodar uma Sparc Station 1 usada para fins gerais ...)
+
+    No entanto, o Linux *nunca* usou esse algoritmo para swapping/paging de memória. O 
+    Linux não aloca memória quando brk() ou sbrk() são chamados! Ele espera até que a 
+    memória seja realmente *usada*. Portanto, não importa quanta memória RAM ou swap um 
+    sistema tenha, você pode chamar malloc() (que chama sbrk() para obter mais memória) e 
+    obter 2,1 Gb de memória! (Por um lado, o processo no Linux é mais rápido. Por outro 
+    lado, o processo no BSD é mais seguro.) Cada página individual dessa memória só será 
+    realmente alocada se for *usada*. E a maneira como o Linux faz isso aloca RAM ou 
+    swap. Portanto, enquanto a memória virtual total para BSD é o tamanho de swap, para 
+    Linux é a soma de RAM e swap.
+
+    O resultado imediatamente óbvio dessa diferença é que um sistema BSD com espaço de 
+    swap duas vezes o tamanho da RAM tem memória virtual duas vezes o tamanho da RAM, mas 
+    um sistema Linux com espaço de swap duas vezes o tamanho da RAM tem memória virtual 
+    *três* vezes o tamanho de RAM.
+
+	      OK, como calculamos o espaço de troca para Linux?
+	      =================================================
+
+    (Veja a seção "Quanto espaço de swap devo usar?" acima)
+
+    Com o antigo algoritmo de swapping do BSD, o espaço de swap seria a quantidade de 
+    memória virtual desejada e isso não está relacionado ao tamanho da RAM, exceto que 
+    deve ser maior que a RAM. No entanto, em um sentido prático, com sistemas típicos e 
+    padrões de uso típicos, fazia pouco sentido ter mais programas na swap do que em 
+    execução devido à lentidão envolvida. E, claro, essa "regra geral" foi desenvolvida 
+    quando o espaço em disco era relativamente mais caro do que é agora. (Mas a RAM 
+    também era mais cara e ouvi falar de estações de trabalho da Sun que tinham 16Mb de 
+    RAM e 300Mb de swap que executavam programas de modelagem que levavam um mês para 
+    terminar. Hoje, posso fazer isso na minha máquina doméstica no que, uma hora?)
+
+	      O que aconteceria se essa regra fosse aplicada ao Linux?
+	      ========================================================
+
+    Nos sistemas atuais, uma estação de trabalho doméstica pode ter vários Gb de RAM e 
+    eventualmente *nunca* utilizar o swap! Nos sistemas atuais, uma estação de trabalho 
+    doméstica pode ter muitos Gb de RAM e provavelmente *nunca* entra em troca! Além 
+    disso, existem novas ferramentas para usar a memória de forma mais eficiente, como a 
+    compactação de RAM (zRAM).
+
+    Por outro lado, existem servidores que podem ter centenas de processos que estão 
+    sempre em execução, mas estão inativos 99% do tempo. Por que investir em RAM, quando 
+    apenas alguns desses programas estão sendo usados ativamente? Nesse caso faz sentido 
+    usar um espaço de swap muitas vezes maior que a RAM.
     
  (Tradução em andamento...)
